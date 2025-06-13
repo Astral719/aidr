@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花语日签AI绘画提示词生成器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>花语日签AI绘画提示词生成器</h1>
+        <p class="description">选择日期和风格，快速生成用于“极梦AI”的绘画提示词。</p>
+
+        <div class="card">
+            <h2>1. 选择日期</h2>
+            <div class="form-group">
+                <label for="date-picker">公历日期:</label>
+                <input type="date" id="date-picker">
+            </div>
+            <div class="info-group">
+                <p><strong>星期:</strong> <span id="weekday-display"></span></p>
+                <p><strong>农历:</strong> <span id="lunar-display"></span> <span class="lunar-tip">(仅供参考)</span></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>2. 自定义内容</h2>
+            <div class="form-group">
+                <label for="style-select">绘画风格:</label>
+                <select id="style-select">
+                    <option>中国水墨风格</option>
+                    <option>清新插画风格</option>
+                    <option>可爱卡通风格</option>
+                    <option>温馨水彩风格</option>
+                    <option>日系动漫风格</option>
+                    <option>油画质感</option>
+                    <option>国潮风</option>
+                    <option>写实摄影风格</option>
+                    <option>复古海报风格</option>
+                    <option>赛博朋克风格</option>
+                    <option>奇幻绘本风格</option>
+                    <option>极简线条艺术</option>
+                    <option>装饰艺术风格</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="flower-select">当月花名:</label>
+                <select id="flower-select">
+                    <option>请先选择日期</option>
+                </select>
+            </div>
+            <div class="info-group">
+                <p><strong>花语:</strong> <span id="flower-lang-display"></span></p>
+                <p><strong>金句:</strong> <span id="golden-sentence-display"></span></p>
+            </div>
+            <div class="form-group">
+                <label for="event-input">当日宜事:</label>
+                <input type="text" id="event-input" value="亲近自然, 放松心情">
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>3. 生成提示词</h2>
+            <button id="generate-btn">生成提示词</button>
+            <div class="form-group output-group">
+                <label for="prompt-output">生成的提示词:</label>
+                <textarea id="prompt-output" rows="15" readonly></textarea>
+            </div>
+            <button id="copy-btn">复制提示词</button>
+            <p class="guidance">
+                请复制到 <a href="https://jimeng.jianying.com/" target="_blank">极梦AI</a> 生成图片。
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
